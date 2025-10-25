@@ -1,0 +1,13 @@
+<div class="pokemon-grid">
+    {% for pokemon in pokemon_list %}
+        <div>
+            <a href="{% url 'pokemon-builder' pokemon.name %}" class="text-decoration-none">
+                <div class="pokemon-image-container">
+                    <img src="{{ pokemon.shiny_sprite }}" alt="{{ pokemon.name }} shiny" class="shiny">
+                    <img src="{{ pokemon.normal_sprite }}" alt="{{ pokemon.name }} normal" class="normal">
+                </div>
+                <p class="text-center text-capitalize mt-2">{{ pokemon.name }}</p>
+            </a>
+        </div>
+    {% endfor %}
+</div>
